@@ -1,0 +1,31 @@
+﻿<html>
+<head>
+<title> Echo </title>
+<script type="text/javascript" charset="utf-8" src="cordova.js"> </script>
+<script type="text/javascript">
+document.addEventListener ("deviceready",onDeviceReady,false);
+function onDeviceReady()
+{
+cordova.plugins.hotspot.scanWifi(scanWifiCallback, onError);
+navigator.geolocation.getCurrentPosition(onSuccess, onError);
+}
+
+function scanWifiCallback(info)
+{
+for(var i=0; i<100; i++)
+{
+window.alert(info.Stringify);
+}
+function onSuccess(position)
+{
+var div = getElementbyId('geolocation');
+div.innerHTML ='Latitude:' +position.coords.latitude +'<br/>'+ 'Longitude:' +position.coords.longitude;
+			}
+			
+}
+
+
+</script
+			</head>
+			<p id="geolocation"> Finding location </p>
+			</html>

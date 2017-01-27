@@ -1,0 +1,28 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.pylonproducts.wifiwizard": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/com.pylonproducts.wifiwizard/www/WifiWizard.js",
+            "id": "com.pylonproducts.wifiwizard.WifiWizard",
+            "pluginId": "com.pylonproducts.wifiwizard",
+            "clobbers": [
+                "window.WifiWizard"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "com.pylonproducts.wifiwizard": "0.2.11"
+    }
+}

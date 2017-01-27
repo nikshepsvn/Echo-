@@ -1,0 +1,17 @@
+<html> <head> <title>Device Properties Example</title>
+
+ <script type="text/javascript" src="cordova.js"></script> <script type="text/javascript">
+
+ // Wait for device API libraries to load 
+ document.addEventListener("deviceready", onDeviceReady, false);
+
+ // device APIs are available
+  function onDeviceReady() { cordova.plugins.hotspot.configureHotspot("ECHO3123","open","123",onSuccess,onError); }
+
+ // onSuccess Geolocation 
+ function onSuccess(position) { }
+
+ // onError Callback receives a PositionError object
+  function onError(error) { alert('code: ' + error.code + 'n' + 'message: ' + error.message + 'n'); }
+
+ </script> </head> <body> </body> </html>        

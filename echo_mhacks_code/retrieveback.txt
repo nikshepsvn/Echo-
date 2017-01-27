@@ -1,0 +1,29 @@
+
+
+
+/*
+$newarray=array();
+$data=file_get_contents($FILEPATH);
+$filearray=json_decode($data,true);
+$indexarray=array_keys($filearray);
+$count=0;
+echo array_keys($filearray);
+for($i=0;$i<count($indexarray);$i++)
+{	
+	echo $i;
+	if(substr($indexarray[$i],1,5)=="1234")
+		{
+			$newarray[$count]=$i;	
+			$count++;
+		}
+}
+
+print (substr($indexarray[$i],1,5));
+for($i = 0; $i < count($newarray); $i++)
+{    
+$LAT = $filearray[$newarray[$i]]["LAT"];   
+$LONG = $filearray[$newarray[$i]]["LONG"];
+echo $LAT;
+}
+
+*/
