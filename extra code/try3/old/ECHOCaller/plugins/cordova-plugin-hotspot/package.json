@@ -1,0 +1,42 @@
+{
+  "name": "cordova-plugin-hotspot",
+  "version": "1.2.6",
+  "description": "Cordova WiFi Hotspot Plugin",
+  "cordova": {
+    "id": "cordova-plugin-hotspot",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hypery2k/cordova-hotspot-plugin.git"
+  },
+  "keywords": [
+    "cordova",
+    "hotspot",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "scripts": {
+    "pretest": "rm -rf tmp && mkdir -p tmp && cd tmp && git clone https://github.com/simpligility/maven-android-sdk-deployer.git && cd maven-android-sdk-deployer/ && mvn install -P 6.0 && ls ~/.m2/repository/android/android/",
+    "test": "cd tmp && git clone https://github.com/apache/cordova-app-hello-world.git && cd cordova-app-hello-world && cordova platform add android && cordova plugin add cordova-plugin-compat && cordova build && cd ../../test/android && ./gradlew build && cd ../../tmp/cordova-app-hello-world && cordova plugin add ../.. && cordova plugin add http://git-wip-us.apache.org/repos/asf/cordova-plugin-test-framework.git",
+    "posttest": "jsdoc -c jsdoc.json && jsdoc2md www/HotSpotPlugin.js | sed s/hotSpotPlugin/cordova.plugins.hotspot/g | sed s/HotSpotPlugin/cordova.plugins.hotspot/g > PLUGIN_USAGE.MD"
+  },
+  "author": {
+    "name": "Martin Reinhardt"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "jsdoc": "3.4.0",
+    "jsdoc-to-markdown": "1.3.3"
+  },
+  "readme": "# Cordova HotSpot Plugin\n\n\n[![Build Status](https://travis-ci.org/hypery2k/cordova-hotspot-plugin.svg?branch=master)](https://travis-ci.org/hypery2k/cordova-hotspot-plugin) [![npm version](https://badge.fury.io/js/cordova-plugin-hotspot.svg)](http://badge.fury.io/js/cordova-plugin-hotspot) [![Dependency Status](https://david-dm.org/hypery2k/cordova-hotspot-plugin.svg)](https://david-dm.org/hypery2k/cordova-hotspot-plugin) [![devDependency Status](https://david-dm.org/hypery2k/cordova-hotspot-plugin/dev-status.svg)](https://david-dm.org/hypery2k/cordova-hotspot-plugin#info=devDependencies) \n[![Issue Stats](http://issuestats.com/github/hypery2k/cordova-hotspot-plugin/badge/pr?style=flat)](http://issuestats.com/github/hypery2k/cordova-hotspot-plugin) [![Issue Stats](http://issuestats.com/github/hypery2k/cordova-hotspot-plugin/badge/issue?style=flat)](http://issuestats.com/github/hypery2k/cordova-hotspot-plugin) \n\n> A Cordova plugin for managing HotSpot networks on Android with Cordova 3.4.0 / API Level 19\n \n[![NPM](https://nodei.co/npm/cordova-plugin-hotspot.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/cordova-plugin-hotspot/)\n\n\n> Feel free to **donate**\n> \n> <a href='https://pledgie.com/campaigns/25442'><img alt='Click here to lend your support to: MobileApps with Cordova and make a donation  at pledgie.com !' src='https://pledgie.com/campaigns/25442.png?skin_name=chrome' border='0' ></a>\n> <a target=\"_blank\" href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AGPGLZYNV6Y5S\">\n> <img alt=\"\" border=\"0\" src=\"https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif\"/>\n> </img></a>\n> Or donate [Bitcoins](bitcoin:3NKtxw1SRYgess5ev4Ri54GekoAgkR213D):\n> [![Bitcoin](https://martinreinhardt-online.de/bitcoin.png)](bitcoin:3NKtxw1SRYgess5ev4Ri54GekoAgkR213D)\n> \n> Also via [greenaddress](https://greenaddress.it/pay/GA3ZPfh7As3Gc2oP6pQ1njxMij88u/)\n\n## Installation\n\n```bash\n$ cordova plugin add cordova-plugin-hotspot\n```\n## Usage\n\nSee [here](./PLUGIN_USAGE.MD#cordova.plugins.hotspot) for complete API reference.\nFor Ionic Guidance see [here](https://github.com/hypery2k/cordova-hotspot-plugin/wiki/Ionic-usage).\nYou need to make sure that you have the right [Android permissions](https://github.com/hypery2k/cordova-hotspot-plugin/wiki/Android-Configuration).\n\n## Dev\n\n### To run the tests\n\n```bash\nnpm test\n```\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/hypery2k/cordova-hotspot-plugin/issues"
+  },
+  "homepage": "https://github.com/hypery2k/cordova-hotspot-plugin#readme",
+  "_id": "cordova-plugin-hotspot@1.2.6",
+  "_from": "cordova-plugin-hotspot@latest"
+}
